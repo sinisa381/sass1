@@ -1,0 +1,63 @@
+//about
+.section-about {
+    background-color: $color-gray-light-1;
+    // height: 100%;
+    padding: 25rem 0;
+    // padding-top: 25rem;
+    margin-top: -20vh;
+    @include respond(tab-land){
+        padding: 25rem 2rem 2rem 4rem;
+    }
+    @include respond(phone){
+        padding: 4rem;
+    }
+}
+
+.section-cards {
+    background: linear-gradient(to right, rgba($color-primary-dark, .6),
+     rgba($color-primary-medium, .6)), url('../img/forest.jpeg');
+    opacity: .9;
+    // height: 100vh;
+    height: auto;
+    
+    background-position: cover;
+    clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
+    margin-top: -20vh;
+    padding-top: 20rem ;
+    @include respond(tab-land){
+        background: linear-gradient(to right, rgba($color-primary-dark, .6),
+         rgba($color-primary-medium, .6));
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 2rem 1rem;
+        margin: 1rem;
+        height: auto;
+
+    }
+}
+.section-tours {
+    background-color: $color-gray-light-1;
+    padding: 15rem ;
+    margin-top: -20vh;
+    //   @include respond(tab-land){
+    //       padding: 1rem;
+    //   }
+    @include respond(tab-land){
+        padding: 1rem;
+        margin-top: 1rem
+    }
+    @include respond(phone){
+        padding: 1rem;
+        margin-top: 1rem
+    }
+}
+
+.section-booking {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient($color-primary-medium, $color-primary-dark);
+    padding: 4rem;
+        @include respond(tab-land){
+            display: table;
+            padding: 0;
+        }
+}

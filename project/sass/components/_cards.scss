@@ -1,0 +1,27 @@
+
+.card {
+    background-color: rgba($color-light, .8);
+    padding: 2rem 1rem;
+    box-shadow: 0 3rem 7rem rgba($color-black, .5);
+    transition: all .1s;
+    margin-bottom: 15rem;
+    @include respond(tab-land){
+        padding: 2rem;
+        box-shadow: 0 2rem 5rem rgba($color-black, .3);
+    }
+    &:hover{
+        transform: scale(1.1) translateY(-1rem);
+        .fas {
+            color: #fff;
+        }
+    }
+    .fas {
+        color: $color-light;
+        display: inline-block;
+        margin-bottom: 2rem;
+        transition: all .3s;
+            @include respond(tab-land){
+                color: $color-gray-dark;
+            }
+    }
+}

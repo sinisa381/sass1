@@ -1,0 +1,46 @@
+.header {
+    // background: linear-gradient(to right, rgba($color-primary-dark, 0.7) 40%, rgba($color-primary-light, 0.7) 60%, transparent), url('../img/pexels-photo-269037.jpeg');
+    background: radial-gradient(circle farthest-corner at -40px -40px,
+     rgba($color-primary-dark, 0.7) 15%,
+      rgba($color-primary-light, 0.7) 40%, transparent),
+      url('../img/pexels-photo-269037.jpeg'); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 95vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+    @include respond(tab-land){
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background-size: cover;
+    }
+    @include respond(phone){
+        width: 100wv;
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &__logo {
+        text-decoration: none;
+        color: $color-light;
+        font-weight: bold;
+        display: block;
+        font-size: 2rem;
+        transition: all 1.5s;
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__text-box {
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

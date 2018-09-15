@@ -1,0 +1,22 @@
+.mb-8 { margin-bottom: 8rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-4{ margin-bottom: 4rem; }
+.my-1 { margin: 1rem 0; }
+.mt-5 { margin-top: 5rem; }
+@include respond(tab-land){
+   .mb-8 { margin-bottom: 2rem; }
+   .mb-1 { margin-bottom: 1rem; }
+   .mb-4{ margin-bottom: 2rem; }
+   .my-1 { margin: 1rem 0; }
+   .mt-5 { margin-top: 3rem; }
+   .pt5 { padding-top: 2rem; }
+   .pb5 { padding-bottom: 2rem}
+
+}
+.pt5 { padding-top: 5rem; }
+.pb5 { padding-bottom: 5rem}
+
+.text-up { text-transform: uppercase; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center{ text-align: center; }

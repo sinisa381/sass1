@@ -1,0 +1,65 @@
+.nav {
+   position: fixed;
+   z-index: 99999;
+   color: #000000;
+   width: 28vw;
+   height: 1000vh;
+   background: rgba($color-black,.7);
+   transform: translateX(-120%);
+   transition: all .2s;
+   @include respond(tab-port){
+      width: 40vw;
+   }
+   &__items{
+      list-style-type: none;
+      padding: 2rem 6rem;
+   }
+   &__item{
+      margin: 2rem 0;
+      background: darken($color-light, 90%);
+      padding: 1rem;
+      transition: all .1s;
+      &:hover{
+         transform: scale(1.1) translateX(1.5rem);
+         color: #ffffff;
+      }
+   }
+   &__link{
+      color: $color-light;
+      text-decoration: none;
+
+   }
+}
+   .navbaricon {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $color-light;
+      position: fixed;
+      right: 4rem;
+      top: 4rem;
+      z-index: 9999999;
+      @include respond(tab-port){
+         top: 2rem;
+         right: 2rem;
+      }
+      div {
+         position: absolute;
+         top: 2.4rem;
+         left: 2.4rem;
+         transform: translate(-50%, -50%);
+      }
+      span {
+         width: 3rem;
+         height: .5rem;
+         background-color: lighten($color-black,50%);
+         display: block;
+         margin: .3rem 0;
+         // position: absolute;
+      }
+   }
+
+   //open nav
+.open{
+   transform: translateX(0%);
+}

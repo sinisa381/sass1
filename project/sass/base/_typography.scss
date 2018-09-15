@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import '../abstracts/variables';
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 1rem;
+    &--main {
+        display: block;
+        font-weight: 400;
+        font-size: 5rem;
+        letter-spacing: 2rem;
+        animation: moveInLeft .5s;
+        @include respond(phone){
+            font-size: 4rem;
+            letter-spacing: 1rem;
+        }
+    }
+    &--sub {
+        display: block;
+        font-weight: 300;
+        letter-spacing: 1rem;
+        // font-variant: small-caps;
+        animation: moveInRight .5s;
+        @include respond(phone){
+            font-size: 2rem;
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+
+
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to right,$color-primary-light, $color-primary-dark);
+    display: inline-block;
+    // -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+    backface-visibility: hidden;
+    &:hover{
+        transform: skew(5deg, 5deg);
+    }
+    @include respond(phone){
+        font-size: 2rem;
+        letter-spacing: .1rem;
+        margin: 0 1.7rem;
+    }
+}
+
+.heading-red {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to right,$color-red-light, $color-red-dark);
+    display: inline-block;
+    // -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+    &:hover{
+        transform: skew(5deg, 5deg);
+    }
+    @include respond(phone){
+        font-size: 3rem;
+        letter-spacing: .1rem;
+        margin: 0 1.7rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: $font-size-default;
+    text-align: left;
+    @include respond(phone){
+        font-size: 2rem;
+        letter-spacing: .1rem;
+    }
+}

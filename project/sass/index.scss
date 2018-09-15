@@ -1,0 +1,48 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+
+@import 'base/base';
+@import 'base/animation';
+@import 'base/typography';
+@import 'base/utilities';
+
+
+@import 'components/button';
+@import 'components/gallery';
+@import 'components/tours';
+@import 'components/stories';
+@import 'components/cards';
+@import 'components/booking';
+
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/nav';
+
+@import 'pages/home';
+
+.test {
+  height: 50vh;
+  width: 100%;
+  background-color: rgb(216, 84, 106);
+  color: #fff;
+  display: table;
+  @include respond(tab-land){
+    padding: 5rem;
+  }
+}
+
+.align {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text {
+  text-align: center;
+  text-shadow: $text-shadow;
+}
+
+
+
+
+

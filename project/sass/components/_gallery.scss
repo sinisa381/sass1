@@ -1,0 +1,83 @@
+.gallery {
+    position: relative;
+        // transition: all .2s;
+    // &:not(:hover){
+    //     transform: scale(.7);
+    // }
+    transition: all .1s;
+        @include respond(tab-land){
+            margin: 0;
+            padding: 0;
+        }
+    &:hover &__image:not(:hover){
+        transform: scale(.9);
+            @include respond(tab-land){
+                transform: scale(1);
+            }
+    }
+    &__image {
+        // display: block;
+        // height: 35rem;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 2px;
+        background-size: 100%;
+        background-position: center;
+        // border: 3px solid lighten($color-black,20%);
+        // background-clip: border-box;
+        padding: 1rem;
+        // background-origin: border-box;
+        transition: all .1s;
+        @include respond(tab-land){
+            display: block;
+            // width: 60vw;
+            width: 100%;
+            position: static;
+            // margin: 0 auto;
+            padding: 0;
+        }
+        &:hover{
+            border: 3px solid lighten($color-black,20%);
+            
+            transform: scale(1.2);
+            z-index: 100;
+            @include respond(tab-land){
+                transform: scale(1);
+                border: none;
+            }
+
+        }
+        &--1 {
+            z-index: 4;
+            top: 0rem;
+            left: 40%;
+            transform: rotateZ(5deg);
+            @include respond(tab-land){
+            transform: rotateZ(0);
+            display: none;
+            }
+        }
+        &--2 {
+            z-index: 4;
+            top: 15rem;
+            left: 0rem;
+            transform: rotateZ(5deg);
+            @include respond(tab-land){
+            transform: rotateZ(0);
+            }
+
+        }
+        &--3 {
+            z-index: 1;
+            left: 0;
+            top:0;
+            transform: rotateZ(-5deg);
+            @include respond(tab-land){
+            transform: rotateZ(0);
+            }
+        }
+
+    }
+}
